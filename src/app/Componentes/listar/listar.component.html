@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Lista de Volcanes</h2>
+      </div>
+      <div class="card-body">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Volcan Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Actividad</th>
+            <th scope="col">Altura</th>
+
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let v  of volcan">
+            <td >{{v.idVolca}}</td>
+            <td>{{v.nombre}}</td>
+            <td>{{v.pais}}</td>
+            <td>{{v.actividad}}</td>
+            <td>{{v.altura}}</td>
+
+            <td><button class="btn btn-outline-dark" (click)="editar(v)">Editar</button></td>
+            <td><button class="btn btn-outline-primary" (click)="eliminar(v)">Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
